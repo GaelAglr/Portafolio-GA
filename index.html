@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Gael Aguilar</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <nav class="navbar rounded-4 sombra-suave">
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="menu rounded-4">
+            <li><a href="#inicio" class="texto">Inicio</a></li>
+            <li><a href="#sobre-mi" class="texto">Sobre mí</a></li>
+            <li><a href="#proyectos" class="texto">Proyectos</a></li>
+            <li><a href="#contacto" class="texto">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <section id="inicio" class="parallax inicio">
+            <div class="texto-parallax texto rounded-4 sombra-fuerte">
+                <h1 class="nombre">Gael Aguilar</h1>
+                <p class="subtitulo subtituloA">Desarrollador <em>Full Stack</em></p>
+            </div>
+        </section>
+    </header>
+    
+    <section id="sobre-mi" class="contenido desplazar">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="titulo subrayado">Sobre mí</h2>
+            </div>
+            <div class="col-12">
+                <p class="texto mt-3">
+                    Soy Gael Aguilar, un desarrollador full stack con gran pasión por la tecnología. Mi enfoque va <br />
+                    más allá del desarrollo web, abarcando también aplicaciones de otros tipos y diseño innovador. <br />
+                    Me impulsa la idea de crear soluciones tecnológicas funcionales y visualmente atractivas que <br />
+                    conecten con los usuarios de forma efectiva.
+                </p>
+            </div>
+            <div class="col-12">
+                <a href="CV_Gael.pdf" class="btn-principal mt-4 texto" target="_blank">Curriculum Vitae</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="proyectos" class="parallax proyectos">
+        <div class="texto-parallax textos rounded-4 sombra-fuerte">
+            <h2 class="titulo">Proyectos Destacados</h2>
+            <p class="subtitulo subtituloA">Estos son algunos de mis proyectos<br /> 
+                destacados como desarrollador
+            </p>
+        </div>
+    </section>
+
+    <section class="contenido lista-proyectos">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="titulo subrayado">Mis proyectos</h2>
+            </div>
+        </div>    
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <div class="carrusel d-flex justify-content-center">
+                    <div class="proyecto m-3 rounded-4 activo2">
+                        <img src="portada_p1.png" alt="Proyecto 1">
+                        <div class="contenidop">
+                            <h3 class="texto">Hastán</h3>
+                            <p class="texto">Sistema médico avanzado.</p>
+                            <a href="ver-hastan.html" class="btn-principal" style="font-family: 'f-texto', Arial;">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="proyecto m-3 rounded-4">
+                        <img src="portada_p2.png" alt="Proyecto 2">
+                        <div class="contenidop">
+                            <h3 class="texto">Calculadora Gauss-Jordan</h3>
+                            <p class="texto">Eliminación gaussiana, determinantes e inversa.</p>
+                            <a href="ver-calculadora.html" class="btn-principal" style="font-family: 'f-texto', Arial;">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navegacion mt-3">
+                    <button id="flecha-izquierda" class="btn-principal m-4" style="width: 12%; font-family: 'f-texto', Arial;">
+                        <span><</span>
+                    </button>
+                    <button id="flecha-derecha" class="btn-principal m-4" style="width: 12%; font-family: 'f-texto', Arial;">
+                        <span>></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contacto" class="parallax contacto">
+        <div class="texto-parallax textos rounded-4 sombra-fuerte">
+            <h2 class="titulo">Contacto</h1>
+            <p class="subtitulo subtituloA">Envíame un mensaje y<br /> 
+                trabajemos juntos
+            </p>
+        </div>
+    </section>
+
+    <section class="contenido">
+        <h3 class="titulo subrayado">ChatBot de mí</h3>
+        <div id="chatbot-container">
+            <div id="chat-display" class="chat-display texto">
+            </div>
+            <div class="chat-input texto">
+                <input type="text" id="chat-input-field" class="texto rounded-4" placeholder="Escribe un mensaje..." />
+                <button id="chat-send-button" class="btn-principal w-25 texto">Enviar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="social">
+        <ul class="lista-s d-flex">
+            <li>
+                <a href="https://wa.me/525565285694?text=Hola%2C%20Gael" target="_blank">
+                  <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+              </li>              
+            <li>
+                <a href="mailto:gaelnn10@gmail.com?subject=Hola%20Gael&body=Quiero%20contactarte%20para%20un%20proyecto.">
+                  <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                </a>
+              </li>
+            <li>
+                <a href="https://www.facebook.com/share/1CVuXyiMaf/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/gael-aguilar-544171248"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </section>
+    
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Hastan-proyecto</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <nav class="navbar rounded-4 sombra-suave">
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="menu rounded-4">
+            <li><a href="index.html" class="texto">Inicio</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <section id="#" class="parallax inicio-p1">
+            <div class="texto-parallax-p1 textos rounded-4 sombra-fuerte">
+                <h1 class="nombre">Proyecto Hastán</h1>
+                <p class="subtitulo subtituloA">Sistema <em>Médico</em></p>
+            </div>
+        </section>
+    </header>
+    
+    <section id="#" class="contenido-p1 desplazar">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="titulo subrayado">¿Qué es Hastán?</h2>
+            </div>
+            <div class="col-12">
+                <p class="texto mt-3">
+                    Hastán es un sistema médico con una amplia variedad de funciones. Abarca <br class="quitar" />
+                    desde la creación de recetas, registros médicos, inventarios virtuales, <br class="quitar" />
+                    etc, hasta filas virtuales en tiempo real, gráficas informativas para los <br class="quitar" />
+                    doctores de múltiples estadísticas, etc. 
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="#" class="parallax galeria">
+        <div class="texto-parallax-p1 textos rounded-4 sombra-fuerte">
+            <h2 class="titulo">Galería de imágenes</h2>
+            <p class="subtitulo subtituloA">A continuación se muestran algunas<br /> 
+                de las imágenes de la aplicación.
+            </p>
+        </div>
+    </section>
+
+    <section class="contenido-p1 galeria-p">
+        <div class="container py-5">
+            <h2 class="text-center mb-4 titulo subrayado">Hastán</h2>
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="galeria-card texto" onclick="abrirModal('p1-img1.png', 'En esta imágen se observa la solicitud de un turno.')">
+                        <img src="p1-img1.png" alt="Imagen 1" class="img-fluid rounded">
+                    </div>                    
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="galeria-card texto" onclick="abrirModal('p1-img2.png', 'Aquí se ve el como un médico comienza el registro de una visita.')">
+                        <img src="p1-img2.png" alt="Imagen 2" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="galeria-card texto" onclick="abrirModal('p1-img3.png', 'En esta sección aparecen algunas de las gráficas estadísticas de los doctores.')">
+                        <img src="p1-img3.png" alt="Imagen 3" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row g-4 mt-5">                
+                <div class="col-12 col-md-6">
+                    <div class="video-card rounded-4 sombra-fuerte">
+                        <div class="video-caption rounded-4">
+                            <p class="texto">Funcionalidad de Pacientes</p>
+                        </div>
+                        <video class="video-fluid" controls>
+                            <source src="vid1.mp4" type="video/mp4">
+                            Tu navegador no soporta videos HTML5.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="video-card rounded-4 sombra-fuerte">
+                        <div class="video-caption rounded-4">
+                            <p class="texto">Funcionalidad de Doctores</p>
+                        </div>
+                        <video class="video-fluid" controls>
+                            <source src="vid2.mp4" type="video/mp4">
+                            Tu navegador no soporta videos HTML5.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <div id="imagenModal" class="modal">
+        <div class="modal-contenedor">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <img class="modal-contenido" id="imagenGrande" alt="Imagen ampliada">
+            <div class="modal-descripcion texto" id="descripcionImagen">
+                <p class="texto">Descripción de la imagen</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        });
+
+        function abrirModal(src, descripcion = "Descripción de la imagen") {
+        const modal = document.getElementById('imagenModal');
+        const imagenGrande = document.getElementById('imagenGrande');
+        const descripcionImagen = document.getElementById('descripcionImagen');
+
+        imagenGrande.src = src;
+        descripcionImagen.innerHTML = `<p>${descripcion}</p>`;
+        modal.style.display = "block";
+        }
+
+        function cerrarModal() {
+            const modal = document.getElementById('imagenModal');
+            modal.style.display = "none";
+        }
+
+    </script>
+</body>
+</html>
