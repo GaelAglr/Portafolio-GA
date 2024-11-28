@@ -204,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         messageDiv.textContent = message;
         chatDisplay.appendChild(messageDiv);
         chatDisplay.scrollTop = chatDisplay.scrollHeight;
+    }
 
 function getResponse(input) {
     const lowerInput = input.toLowerCase();
