@@ -1,3 +1,8 @@
+:root {
+    --plyr-color-main: blue;
+    --plyr-volume-bar-background: purple;
+}
+
 @font-face {
     font-family: 'f-texto';
     font-style: normal;
@@ -42,8 +47,6 @@
 * {
     box-sizing: border-box;
 }
-
-
 .titulo {
     font-family: 'f-titulo', Arial;
     font-size: 64px;
@@ -152,7 +155,7 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* ----- Nav ----- */
+/* ----- Navegar ----- */
 .navbar {
     position: fixed;
     top: 0;
@@ -386,7 +389,6 @@ ul {
     opacity: 1;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-
 
 /* ----- Contacto ----- */
 .contacto {
@@ -693,7 +695,6 @@ input, textarea {
     margin: 0;
 }
 
-
 /* ----- Proyecto 2 ----- */
 .inicio-p2 {
     background-image: url('fondo8.png');
@@ -738,7 +739,6 @@ input, textarea {
 .galeria-2 {
     background-image: url('fondo9.png');
 }
-
 
 /* ----- Animaciones ----- */
 .fade-in {
@@ -786,9 +786,34 @@ input, textarea {
     }
 }
 
-
 /* ----- Responsivo ----- */
-@media (max-width: 768px) {
+@media (max-width: 1048px) {
+    .quitar {
+        display: none;
+    }
+}
+@media (max-width: 992px) {
+    .carrusel {
+        height: 400px;
+    }
+    .proyecto {
+        width: 480px;
+        height: 320px; 
+    }
+    .proyecto.siguiente {
+        z-index: 5;
+        transform: translateY(40px) scale(0.9);
+        opacity: 1;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    .proyecto.anterior {
+        z-index: 5;
+        transform: translateY(-40px) scale(0.9);
+        opacity: 1;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+}
+@media (max-width: 768px){
     .navbar {
         justify-content: space-between; 
     }
@@ -814,32 +839,15 @@ input, textarea {
     .menu-toggle {
         display: flex;
     }
-}
-@media (min-width: 769px) {
-    .menu {
-        flex-direction: row;
-        position: relative;
-        transform: none;
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 0;
-        gap: 60px;
-    }
-}
-@media (max-width: 890px) {    
-    .quitar {
-        display: none;
-    }
-}
-@media (max-width: 768px) {
     .inicio, .proyectos, .contacto, .inicio-p1, .inicio-p2 {
         height: 60vh; 
         padding: 20px 15px;
     }
     .nombre, .titulo {
-        font-size: 40px; /* Tamaño ajustado para pantallas pequeñas */
+        font-size: 40px; 
     }
     .subtituloA, .subtitulo {
-        font-size: 30px; /* Más pequeño en dispositivos móviles */
+        font-size: 30px; 
     }
     .texto {
         font-size: 15px;
@@ -847,47 +855,13 @@ input, textarea {
     .texto-parallax, .texto-parallax-p1, .texto-parallax-p2 {
         padding: 15px 20px;
     }
-}
-@media (max-width: 480px) {
-    .nombre, .titulo {
-        font-size: 32px; /* Más pequeño en dispositivos muy pequeños */
-    }
-
-    .subtituloA, .subtitulo {
-        font-size: 24px;
-    }
-
-    .texto {
-        font-size: 12px;
-    }
-    .texto-parallax, .texto-parallax-p1, .texto-parallax-p2 {
-        padding: 12px 15px; /* Ajustar margen interno */
-    }
-}
-@media (max-width: 992px) {
-    .carrusel {
-        height: 400px;
-    }
-    .proyecto {
-        width: 480px;
-        height: 320px; 
-    }
-    .proyecto.siguiente {
-        z-index: 5;
-        transform: translateY(40px) scale(0.9);
-        opacity: 1;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
-    .proyecto.anterior {
-        z-index: 5;
-        transform: translateY(-40px) scale(0.9);
-        opacity: 1;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    .video-card video {
+        height: calc(30vw + 40px);
     }
 }
 @media (max-width: 576px) {
-    .lista-s {
-        max-width: 600px;
+    .video-card video {
+        height: calc(40vw + 30px);
     }
     .social ul li a .fa {
         font-size: 4em;
@@ -895,7 +869,6 @@ input, textarea {
     .social ul li::before {
         font-size: 4em;
     }
-
     .carrusel {
         height: 290px;
     }
@@ -915,5 +888,54 @@ input, textarea {
         opacity: 1;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
+}
+@media (max-width: 480px) {
+    .nombre, .titulo {
+        font-size: 32px; 
+    }
 
+    .subtituloA, .subtitulo {
+        font-size: 24px;
+    }
+    .texto {
+        font-size: 12px;
+    }
+    .texto-parallax, .texto-parallax-p1, .texto-parallax-p2 {
+        padding: 12px 15px;
+    }
+}
+@media (max-width: 435px) {
+    .proyecto {
+        width: 80%;
+    }
+    .social ul li a .fa {
+        font-size: 3em;
+    }
+    .social ul li::before {
+        font-size: 3em;
+    }
+    .btn-principal {
+        padding: 2px 10px;
+    }
+}
+@media (max-width: 360px) {
+    .btn-principal {
+        padding: 0 0;
+    }
+    .social ul li a .fa {
+        font-size: 2.5em;
+    }
+    .social ul li::before {
+        font-size: 2.5em;
+    }
+}
+@media (min-width: 769px) {
+    .menu {
+        flex-direction: row;
+        position: relative;
+        transform: none;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 0;
+        gap: 60px;
+    }
 }
